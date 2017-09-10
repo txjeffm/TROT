@@ -1,0 +1,140 @@
+(document).ready(function(){
+	(function(jQuery){
+		
+		var fieldIds = {
+        	"Instructions": [
+				'id123-control6615701',
+				'id123-control6619844'
+			],
+        
+			"1ST Bowler": [
+				'id123-control6615687',
+				'id123-control6615637-1',
+				'id123-control6615637-2',
+				'id123-control6625267',
+				'id123-control6625274',
+				'id123-control6598843',
+				'id123-control6598844',
+				'id123-control6617202',
+				'id123-control6617209',
+				'id123-control6617218',
+				'id123-control6617221',
+				'id123-control6619253',
+				'id123-control6619259',
+				'id123-control6598847',
+				'id123-control6599060',
+				'id123-control6598896',
+				'id123-control6602054',
+				'id123-control6602055',
+				'id123-control6598898',
+				'id123-control6599123',
+				'id123-control6598849',
+				'id123-control6598897',
+				'id123-control6598899'
+			],
+			
+			"2nd Bowler": [
+				'id123-control6609334',
+				'id123-control6615666-1',
+				'id123-control6615666-2',
+				'id123-control6625296',
+				'id123-control6625297',
+				'id123-control6606171',
+				'id123-control6606172',
+				'id123-control6617307',
+				'id123-control6617308',
+				'id123-control6617309',
+				'id123-control6617311',
+				'id123-control66919264',
+				'id123-control6619265',
+				'id123-control6606174',
+				'id123-control6606182',
+				'id123-control6606176',
+				'id123-control6606184',
+				'id123-control6606185',
+				'id123-control6606178',
+				'id123-control6606183',
+				'id123-control6606175',
+				'id123-control6606177',
+				'id123-control6606179'
+			],
+			
+			"3rd Bowler": [
+				'id123-control6609409',
+				'id123-control6615671-1',
+				'id123-control6615671-2',
+				'id123-control6625298',
+				'id123-control6625299',
+				'id123-control6609392',
+				'id123-control6609393',
+				'id123-control6617326',
+				'id123-control6617325',
+				'id123-control6617327',
+				'id123-control6617328',
+				'id123-control6619276',
+				'id123-control6619277',
+				'id123-control6609395',
+				'id123-control6609403',
+				'id123-control6609397',
+				'id123-control6609405',
+				'id123-control6609406',
+				'id123-control6609399',
+				'id123-control6609404',
+				'id123-control6609396',
+				'id123-control6609398',
+				'id123-control6609400'
+			],
+
+			"4th Bowler": [
+				'id123-control6609784',
+				'id123-control6615672-1',
+				'id123-control6615672-2',
+				'id123-control6625555',
+				'id123-control6625556',
+				'id123-control6609767',
+				'id123-control6609768',
+				'id123-control6617331',
+				'id123-control6617332',
+				'id123-control6617333',
+				'id123-control6617334',
+				'id123-control6619289',
+				'id123-control6619290',
+				'id123-control6609770',
+				'id123-control6609778',
+				'id123-control6609772',
+				'id123-control6609780',
+				'id123-control6609781',
+				'id123-control6609774',
+				'id123-control6609779',
+				'id123-control6609771',
+				'id123-control6609773',
+				'id123-control6609775'
+			],
+
+			"Team Info": [
+				'id123-control6598903',
+				'id123-control6619536',
+				'id123-control6609782'
+			]
+		};
+		
+		var entryId = jQuery('input[name=entryid]');
+		
+		if(~~entryId.val() > 0){
+			jQuery.each(fieldIds, function(playerId, playerFields){
+				
+				jQuery(playerFields).each(function(index, fieldId){
+					
+					var fieldElement = jQuery('#' + fieldId);
+					
+					if(fieldElement.val().trim() !== '')
+						fieldElement.attr('readonly', 'readonly')
+						.css('background-color', '#eee');
+					
+				});
+				
+			});
+		}
+		
+	})($);
+});
