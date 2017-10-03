@@ -183,7 +183,8 @@ $(document).ready(function() {
       }
     }
 
-    /**
+
+/**
      * @param fieldElement
      */
     function makeElementReadOnly(fieldElement) {
